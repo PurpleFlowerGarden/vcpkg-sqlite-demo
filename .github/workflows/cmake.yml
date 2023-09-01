@@ -26,12 +26,12 @@ jobs:
         nuget sources add `
           -source "https://nuget.pkg.github.com/PurpleFlowerGarden/index.json" `
           -storepasswordincleartext `
-          -name "${env:NUGET_REPOSITORY_ID}" `
+          -name "GitHub" `
           -username "${{ github.repository_owner }}" `
           -password "${{ secrets.GITHUB_TOKEN }}"
         nuget setapikey `
           "${{ secrets.GITHUB_TOKEN }}" `
-          -source "${env:NUGET_REPOSITORY_ID}"
+          -source "GitHub"
         nuget sources
 
     - name: Checkout VCPKG
