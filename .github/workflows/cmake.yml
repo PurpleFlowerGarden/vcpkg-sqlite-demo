@@ -56,6 +56,6 @@ jobs:
       with:
         name: buildlogs
         path: |
-          ${env:VCPKG_ROOT}/buildtrees/*/*.txt
-          ${env:VCPKG_ROOT}/buildtrees/*/*.log
+          ${{ env.VCPKG_ROOT }}/buildtrees/*/*.txt
+          ${{ env.VCPKG_ROOT }}/buildtrees/*/*.log
 
