@@ -41,5 +41,5 @@ jobs:
       shell: pwsh
       run: |
         cd "${env:VCPKG_ROOT}"
-        ./bootstrap-vcpkg.bat"
+        ./bootstrap-vcpkg.bat
 
