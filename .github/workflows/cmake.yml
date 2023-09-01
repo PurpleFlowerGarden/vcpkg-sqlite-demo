@@ -48,5 +48,5 @@ jobs:
       shell: pwsh
       run: |
         cd "${env:VCPKG_ROOT}"
-        ./vcpkg install --debug harfbuzz:x64-windows
+        ./vcpkg install --debug --editable harfbuzz:x64-windows
 
