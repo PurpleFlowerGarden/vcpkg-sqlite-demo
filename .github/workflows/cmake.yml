@@ -50,3 +50,12 @@ jobs:
         cd "${env:VCPKG_ROOT}"
         ./vcpkg install --debug --editable harfbuzz:x64-windows
 
+    - name: Archive VCPKG Log Files
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: buildlogs
+        path: |
+          ${env:VCPKG_ROOT}/vcpkg/buildtrees/*/*.txt
+          ${env:VCPKG_ROOT}/vcpkg/buildtrees/*/*.log
+
