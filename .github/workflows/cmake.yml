@@ -8,8 +8,7 @@ on:
   workflow_dispatch:
 
 env:
-  # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
-  BUILD_TYPE: Release
+  VCPKG_ROOT: "c:/Program Files/vcpkg"
 
 jobs:
   build:
@@ -20,11 +19,6 @@ jobs:
       packages: read
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v3
-      with:
-        submodules: 'recursive'
-
     - name: Setup NuGet
       shell: pwsh
       run: |
@@ -39,9 +33,11 @@ jobs:
           -source "${env:NUGET_REPOSITORY_ID}"
         nuget sources
 
-    - name: Find VCPKG
+    - name: Checkout VCPKG
       shell: pwsh
-      run: |
-        cd "c:/Program Files"
-        mkdir test
+      run:  git clone https://github.com/microsoft/vcpkg.git "${env:VCPKG_ROOT}"
+
+    - name: Bootstrap VCPKG
+      shell: pwsh
+      run: "${env:VCPKG_ROOT}/bootstrap-vcpkg.bat"
 
