@@ -41,5 +41,7 @@ jobs:
 
     - name: Find VCPKG
       shell: pwsh
-      run: echo ${env:VCPKG_ROOT}
+      run: |
+        cd "c:/Program Files"
+        mkdir test
 
