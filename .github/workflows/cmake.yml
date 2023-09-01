@@ -39,5 +39,7 @@ jobs:
 
     - name: Bootstrap VCPKG
       shell: pwsh
-      run: "${env:VCPKG_ROOT}/bootstrap-vcpkg.bat"
+      run: |
+        cd "${env:VCPKG_ROOT}"
+        ./bootstrap-vcpkg.bat"
 
