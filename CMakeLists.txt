@@ -4,5 +4,5 @@ project(VcpkgSQLiteIntegrationDemo CXX)
 
 find_package(SQLite3 REQUIRED)
 
-add_executable(demo demo.cpp)
-target_link_libraries(demo PUBLIC SQLite::SQLite3)
+add_executable(vcpkg-sqlite-demo demo.cpp)
+target_link_libraries(vcpkg-sqlite-demo PUBLIC SQLite::SQLite3 Threads::Threads)
