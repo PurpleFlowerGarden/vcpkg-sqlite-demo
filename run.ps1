@@ -3,5 +3,5 @@ if (${env:GITHUB_WORKSPACE} -eq ${null}) {
 }
 
 pushd ${env:GITHUB_WORKSPACE}/build
-	ctest --build-config Release
+	ctest --build-config Release --extra-verbose
 popd
