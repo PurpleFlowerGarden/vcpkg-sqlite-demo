@@ -203,6 +203,17 @@
       "hidden": true
     },
     
+    
+    {
+      "name": "gh-ubuntu22.04-debug",
+      "description": "For github hosted `ubuntu-22.04` runner",
+      "inherits": [ "ci-base", "make", "x64-linux", "debug" ]
+    },
+    {
+      "name": "gh-ubuntu22.04-release",
+      "description": "For github hosted `ubuntu-22.04` runner",
+      "inherits": [ "ci-base", "make", "x64-linux", "release" ]
+    },
     {
       "name": "gh-ubuntu22.04-llvm14-debug",
       "description": "For github hosted `ubuntu-22.04` runner",
@@ -322,6 +333,18 @@
       "configurePreset": "release",
       "configuration": "Release",
       "hidden": true
+    },
+    {
+      "name": "gh-ubuntu22.04-debug",
+      "configurePreset": "gh-ubuntu22.04-debug",
+      "configuration": "Debug",
+      "inherits": [ "linux" ]
+    },
+    {
+      "name": "gh-ubuntu22.04-release",
+      "configurePreset": "gh-ubuntu22.04-release",
+      "configuration": "Release",
+      "inherits": [ "linux" ]
     },
     {
       "name": "gh-ubuntu22.04-llvm14-debug",
@@ -475,6 +498,16 @@
         "rhs": "Windows"
       },
       "hidden": true
+    },
+    {
+      "name": "gh-ubuntu22.04-debug",
+      "configurePreset": "gh-ubuntu22.04-debug",
+      "inherits": [ "ci", "linux", "debug" ]
+    },
+    {
+      "name": "gh-ubuntu22.04-release",
+      "configurePreset": "gh-ubuntu22.04-release",
+      "inherits": [ "ci", "linux", "release" ]
     },
     {
       "name": "gh-ubuntu22.04-llvm14-debug",
