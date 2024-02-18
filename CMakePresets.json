@@ -205,26 +205,32 @@
     
     {
       "name": "gh-ubuntu22.04-llvm14-debug",
+      "description": "For github hosted `ubuntu-22.04` runner",
       "inherits": [ "ci-base", "make", "x64-linux", "llvm-14", "debug", "coverage" ]
     },
     {
       "name": "gh-ubuntu22.04-llvm14-release",
+      "description": "For github hosted `ubuntu-22.04` runner",
       "inherits": [ "ci-base", "make", "x64-linux", "llvm-14", "release" ]
     },
     {
       "name": "gh-ubuntu22.04-llvm15-debug",
+      "description": "For github hosted `ubuntu-22.04` runner",
       "inherits": [ "ci-base", "make", "x64-linux", "llvm-15", "debug", "coverage" ]
     },
     {
       "name": "gh-ubuntu22.04-llvm15-release",
+      "description": "For github hosted `ubuntu-22.04` runner",
       "inherits": [ "ci-base", "make", "x64-linux", "llvm-15", "release" ]
     },
     {
       "name": "gh-windows2022-debug",
+      "description": "For github hosted `windows-2022` runner",
       "inherits": [ "ci-base", "vs2022", "x64-windows", "debug" ]
     },
     {
       "name": "gh-windows2022-release",
+      "description": "For github hosted `windows-2022` runner",
       "inherits": [ "ci-base", "vs2022", "x64-windows", "release" ]
     },
     {
