@@ -203,21 +203,46 @@
       "hidden": true
     },
     
+    
     {
-      "name": "gh-ubuntu22.04-llvm14-debug",
+      "name": "gh-ubuntu-22.04-debug",
+      "description": "For github hosted `ubuntu-22.04` runner",
+      "inherits": [ "ci-base", "make", "x64-linux", "debug" ]
+    },
+    {
+      "name": "gh-ubuntu-22.04-release",
+      "description": "For github hosted `ubuntu-22.04` runner",
+      "inherits": [ "ci-base", "make", "x64-linux", "release" ]
+    },
+    {
+      "name": "gh-ubuntu-22.04-llvm14-debug",
+      "description": "For github hosted `ubuntu-22.04` runner",
       "inherits": [ "ci-base", "make", "x64-linux", "llvm-14", "debug", "coverage" ]
     },
     {
-      "name": "gh-ubuntu22.04-llvm14-release",
+      "name": "gh-ubuntu-22.04-llvm14-release",
+      "description": "For github hosted `ubuntu-22.04` runner",
       "inherits": [ "ci-base", "make", "x64-linux", "llvm-14", "release" ]
     },
     {
-      "name": "gh-ubuntu22.04-llvm15-debug",
+      "name": "gh-ubuntu-22.04-llvm15-debug",
+      "description": "For github hosted `ubuntu-22.04` runner",
       "inherits": [ "ci-base", "make", "x64-linux", "llvm-15", "debug", "coverage" ]
     },
     {
-      "name": "gh-ubuntu22.04-llvm15-release",
+      "name": "gh-ubuntu-22.04-llvm15-release",
+      "description": "For github hosted `ubuntu-22.04` runner",
       "inherits": [ "ci-base", "make", "x64-linux", "llvm-15", "release" ]
+    },
+    {
+      "name": "gh-windows-2022-debug",
+      "description": "For github hosted `windows-2022` runner",
+      "inherits": [ "ci-base", "vs2022", "x64-windows", "debug" ]
+    },
+    {
+      "name": "gh-windows-2022-release",
+      "description": "For github hosted `windows-2022` runner",
+      "inherits": [ "ci-base", "vs2022", "x64-windows", "release" ]
     },
     {
       "name": "ci-x64-linux-debug",
@@ -310,28 +335,52 @@
       "hidden": true
     },
     {
-      "name": "gh-ubuntu22.04-llvm14-debug",
-      "configurePreset": "gh-ubuntu22.04-llvm14-debug",
+      "name": "gh-ubuntu-22.04-debug",
+      "configurePreset": "gh-ubuntu-22.04-debug",
       "configuration": "Debug",
       "inherits": [ "linux" ]
     },
     {
-      "name": "gh-ubuntu22.04-llvm14-release",
-      "configurePreset": "gh-ubuntu22.04-llvm14-release",
+      "name": "gh-ubuntu-22.04-release",
+      "configurePreset": "gh-ubuntu-22.04-release",
       "configuration": "Release",
       "inherits": [ "linux" ]
     },
     {
-      "name": "gh-ubuntu22.04-llvm15-debug",
-      "configurePreset": "gh-ubuntu22.04-llvm15-debug",
+      "name": "gh-ubuntu-22.04-llvm14-debug",
+      "configurePreset": "gh-ubuntu-22.04-llvm14-debug",
       "configuration": "Debug",
       "inherits": [ "linux" ]
     },
     {
-      "name": "gh-ubuntu22.04-llvm15-release",
-      "configurePreset": "gh-ubuntu22.04-llvm15-release",
+      "name": "gh-ubuntu-22.04-llvm14-release",
+      "configurePreset": "gh-ubuntu-22.04-llvm14-release",
       "configuration": "Release",
       "inherits": [ "linux" ]
+    },
+    {
+      "name": "gh-ubuntu-22.04-llvm15-debug",
+      "configurePreset": "gh-ubuntu-22.04-llvm15-debug",
+      "configuration": "Debug",
+      "inherits": [ "linux" ]
+    },
+    {
+      "name": "gh-ubuntu-22.04-llvm15-release",
+      "configurePreset": "gh-ubuntu-22.04-llvm15-release",
+      "configuration": "Release",
+      "inherits": [ "linux" ]
+    },
+    {
+      "name": "gh-windows-2022-debug",
+      "configurePreset": "gh-windows-2022-debug",
+      "configuration": "Debug",
+      "inherits": [ "windows" ]
+    },
+    {
+      "name": "gh-windows-2022-release",
+      "configurePreset": "gh-windows-2022-release",
+      "configuration": "Release",
+      "inherits": [ "windows" ]
     },
     {
       "name": "ci-x64-freebsd-debug",
@@ -451,24 +500,44 @@
       "hidden": true
     },
     {
-      "name": "gh-ubuntu22.04-llvm14-debug",
-      "configurePreset": "gh-ubuntu22.04-llvm14-debug",
+      "name": "gh-ubuntu-22.04-debug",
+      "configurePreset": "gh-ubuntu-22.04-debug",
       "inherits": [ "ci", "linux", "debug" ]
     },
     {
-      "name": "gh-ubuntu22.04-llvm14-release",
-      "configurePreset": "gh-ubuntu22.04-llvm14-release",
+      "name": "gh-ubuntu-22.04-release",
+      "configurePreset": "gh-ubuntu-22.04-release",
       "inherits": [ "ci", "linux", "release" ]
     },
     {
-      "name": "gh-ubuntu22.04-llvm15-debug",
-      "configurePreset": "gh-ubuntu22.04-llvm15-debug",
+      "name": "gh-ubuntu-22.04-llvm14-debug",
+      "configurePreset": "gh-ubuntu-22.04-llvm14-debug",
       "inherits": [ "ci", "linux", "debug" ]
     },
     {
-      "name": "gh-ubuntu22.04-llvm15-release",
-      "configurePreset": "gh-ubuntu22.04-llvm15-release",
+      "name": "gh-ubuntu-22.04-llvm14-release",
+      "configurePreset": "gh-ubuntu-22.04-llvm14-release",
       "inherits": [ "ci", "linux", "release" ]
+    },
+    {
+      "name": "gh-ubuntu-22.04-llvm15-debug",
+      "configurePreset": "gh-ubuntu-22.04-llvm15-debug",
+      "inherits": [ "ci", "linux", "debug" ]
+    },
+    {
+      "name": "gh-ubuntu-22.04-llvm15-release",
+      "configurePreset": "gh-ubuntu-22.04-llvm15-release",
+      "inherits": [ "ci", "linux", "release" ]
+    },
+    {
+      "name": "gh-windows-2022-debug",
+      "configurePreset": "gh-windows-2022-debug",
+      "inherits": [ "ci", "windows", "debug" ]
+    },
+    {
+      "name": "gh-windows-2022-release",
+      "configurePreset": "gh-windows-2022-release",
+      "inherits": [ "ci", "windows", "release" ]
     },
     {
       "name": "ci-x64-freebsd-debug",
