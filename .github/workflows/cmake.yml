@@ -8,10 +8,13 @@ on:
 
 jobs:
   build:
-    # The CMake configure and build commands are platform agnostic and should work equally well on Windows or Mac.
-    # You can convert this to a matrix build if you need cross-platform coverage.
-    # See: https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix
-    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        runner: ['ubuntu-22.04', 'windows-2022']
+        build_type: ['debug', 'release']
+        
+    runs-on: ${{ matrix.runner }}
 
     steps:
     - name: Checkout Repository
@@ -26,13 +29,13 @@ jobs:
 
     - name: Configure
       working-directory: ${{github.workspace}}
-      run: cmake --preset ci-x64-windows-vs2022-release
+      run: cmake --preset gh-${{matrix.runner}}-${{matrix.build_type}}
       
     - name: Build
       working-directory: ${{github.workspace}}
-      run: cmake --build --preset ci-x64-windows-vs2022-release
+      run: cmake --build --preset gh-${{matrix.runner}}-${{matrix.build_type}}
 
     - name: Test
       working-directory: ${{github.workspace}}
-      run: ctest --preset ci-x64-windows-vs2022-release
+      run: ctest --preset gh-${{matrix.runner}}-${{matrix.build_type}}
 
