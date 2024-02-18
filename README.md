@@ -1,3 +1,5 @@
+![github actions](https://github.com/PurpleFlowerGarden/vcpkg-sqlite-demo/actions/workflows/cmake.yml/badge.svg)
+
 Run `cmake --list-presets` to display a set of supported presets, and then use
     
 ```
