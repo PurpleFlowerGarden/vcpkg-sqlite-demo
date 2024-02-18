@@ -3,5 +3,5 @@ if (${env:GITHUB_WORKSPACE} -eq ${null}) {
 }
 
 pushd ${env:GITHUB_WORKSPACE}/build
-	./Release/vcpkg-sqlite-demo.exe
+	ctest --build-config Release
 popd
