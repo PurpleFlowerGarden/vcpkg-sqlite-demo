@@ -220,6 +220,14 @@
       "inherits": [ "ci-base", "make", "x64-linux", "llvm-15", "release" ]
     },
     {
+      "name": "gh-windows2022-debug",
+      "inherits": [ "ci-base", "vs2022", "x64-windows", "debug" ]
+    },
+    {
+      "name": "gh-windows2022-release",
+      "inherits": [ "ci-base", "vs2022", "x64-windows", "release" ]
+    },
+    {
       "name": "ci-x64-linux-debug",
       "inherits": [ "ci-base", "make", "x64-linux", "debug", "coverage" ]
     },
@@ -332,6 +340,18 @@
       "configurePreset": "gh-ubuntu22.04-llvm15-release",
       "configuration": "Release",
       "inherits": [ "linux" ]
+    },
+    {
+      "name": "gh-windows2022-debug",
+      "configurePreset": "gh-windows2022-debug",
+      "configuration": "Debug",
+      "inherits": [ "windows" ]
+    },
+    {
+      "name": "gh-windows2022-release",
+      "configurePreset": "gh-windows2022-release",
+      "configuration": "Release",
+      "inherits": [ "windows" ]
     },
     {
       "name": "ci-x64-freebsd-debug",
@@ -469,6 +489,16 @@
       "name": "gh-ubuntu22.04-llvm15-release",
       "configurePreset": "gh-ubuntu22.04-llvm15-release",
       "inherits": [ "ci", "linux", "release" ]
+    },
+    {
+      "name": "gh-windows2022-debug",
+      "configurePreset": "gh-windows2022-debug",
+      "inherits": [ "ci", "windows", "debug" ]
+    },
+    {
+      "name": "gh-windows2022-release",
+      "configurePreset": "gh-windows2022-release",
+      "inherits": [ "ci", "windows", "release" ]
     },
     {
       "name": "ci-x64-freebsd-debug",
