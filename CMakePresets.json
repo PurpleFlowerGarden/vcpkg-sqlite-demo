@@ -96,6 +96,14 @@
       "hidden": true
     },
     {
+      "name": "x64-linux-dynamic",
+      "cacheVariables": {
+        "VCPKG_TARGET_TRIPLET": "x64-linux-dynamic"
+      },
+      "inherits": [ "x64-linux" ],
+      "hidden": true
+    },
+    {
       "name": "x64-windows",
       "architecture": "x64",
       "cacheVariables": {
@@ -213,6 +221,16 @@
       "name": "gh-ubuntu-22.04-release",
       "description": "For github hosted `ubuntu-22.04` runner",
       "inherits": [ "ci-base", "make", "x64-linux", "release" ]
+    },
+    {
+      "name": "gh-ubuntu-22.04-dynamic-debug",
+      "description": "For github hosted `ubuntu-22.04` runner",
+      "inherits": [ "ci-base", "make", "x64-linux-dynamic", "debug" ]
+    },
+    {
+      "name": "gh-ubuntu-22.04-dynamic-release",
+      "description": "For github hosted `ubuntu-22.04` runner",
+      "inherits": [ "ci-base", "make", "x64-linux-dynamic", "release" ]
     },
     {
       "name": "gh-ubuntu-22.04-llvm14-debug",
@@ -343,6 +361,18 @@
     {
       "name": "gh-ubuntu-22.04-release",
       "configurePreset": "gh-ubuntu-22.04-release",
+      "configuration": "Release",
+      "inherits": [ "linux" ]
+    },
+    {
+      "name": "gh-ubuntu-22.04-dynamic-debug",
+      "configurePreset": "gh-ubuntu-22.04-dynamic-debug",
+      "configuration": "Debug",
+      "inherits": [ "linux" ]
+    },
+    {
+      "name": "gh-ubuntu-22.04-dynamic-release",
+      "configurePreset": "gh-ubuntu-22.04-dynamic-release",
       "configuration": "Release",
       "inherits": [ "linux" ]
     },
@@ -507,6 +537,16 @@
     {
       "name": "gh-ubuntu-22.04-release",
       "configurePreset": "gh-ubuntu-22.04-release",
+      "inherits": [ "ci", "linux", "release" ]
+    },
+    {
+      "name": "gh-ubuntu-22.04-dynamic-debug",
+      "configurePreset": "gh-ubuntu-22.04-dynamic-debug",
+      "inherits": [ "ci", "linux", "debug" ]
+    },
+    {
+      "name": "gh-ubuntu-22.04-dynamic-release",
+      "configurePreset": "gh-ubuntu-22.04-dynamic-release",
       "inherits": [ "ci", "linux", "release" ]
     },
     {
