@@ -31,7 +31,7 @@ jobs:
 
     - name: Setup Ubuntu
       if: ${{ matrix.runner == 'ubuntu-22.04' }}
-      run: apt install -y glib-dev
+      run: sudo apt install -y glib-dev
 
     - name: Configure
       working-directory: ${{github.workspace}}
