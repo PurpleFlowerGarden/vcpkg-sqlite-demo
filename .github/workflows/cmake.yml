@@ -33,7 +33,7 @@ jobs:
       if: ${{ matrix.runner == 'ubuntu-22.04' }}
       run: |
         sudo apt update
-        sudo apt install -y glib-dev
+        sudo apt install -y libglib2.0-dev
 
     - name: Configure
       working-directory: ${{github.workspace}}
