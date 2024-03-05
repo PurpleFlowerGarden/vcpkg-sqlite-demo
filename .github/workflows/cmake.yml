@@ -33,7 +33,8 @@ jobs:
       if: ${{ matrix.runner == 'ubuntu-22.04' }}
       run: |
         sudo apt update
-        sudo apt install -y libglib2.0-dev
+        sudo apt install -y libpcre2-8-0 libpcre2-16-0 libpcre2-32-0 libpcre2-dev libglib2.0-dev
+        ls -l /lib/x86_64-linux-gnu/
 
     - name: Configure
       working-directory: ${{github.workspace}}
