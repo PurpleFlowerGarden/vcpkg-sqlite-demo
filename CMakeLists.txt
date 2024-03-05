@@ -11,7 +11,7 @@ pkg_check_modules(gobject REQUIRED IMPORTED_TARGET gobject-2.0)
 pkg_check_modules(gthread REQUIRED IMPORTED_TARGET gthread-2.0)
 
 add_executable(${PROJECT_NAME})
-target_sources(${PROJECT_NAME} demo.cpp)
+target_sources(${PROJECT_NAME} PRIVATE demo.cpp)
 target_link_libraries(${PROJECT_NAME} PUBLIC PkgConfig::glib PkgConfig::gio PkgConfig::gmodule PkgConfig::gobject PkgConfig::gthread)
 
 add_test(NAME vcpkg-sqlite-demo COMMAND vcpkg-sqlite-demo COMMAND_EXPAND_LISTS)
