@@ -2,6 +2,7 @@
   "name": "sqlite-vcpkg-integration-demo",
   "version-string": "0.0.1",
   "dependencies": [
+    "curl",
     "sqlite3"
   ]
 }
